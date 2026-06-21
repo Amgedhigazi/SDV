@@ -1,0 +1,119 @@
+.carousel-container {
+  margin: 0 auto;
+  padding: 20px;
+  max-width: 1200px;
+}
+
+.carousel-container.maximized {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: rgba(0, 0, 0, 0.8);
+  overflow: auto;
+}
+
+.theIntro {
+  padding: 20px;
+}
+
+.theIntro h1 {
+  font-size: 2.5em;
+}
+
+.theIntro h5 {
+  font-size: 1.5em;
+}
+
+.theIntro p {
+  font-size: 1.2em;
+}
+
+.box1 {
+  margin: 20px 0;
+}
+
+.box1 .cities {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.box1-image {
+  width: 100%;
+  max-width: 300px;
+  margin: 10px;
+  cursor: pointer;
+}
+
+.box1-image.maximized {
+  width: 100%;
+  height: auto;
+}
+
+.content-text {
+  margin-top: 20px;
+}
+
+.content-text h5 {
+  font-size: 1.5em;
+}
+
+.content-text p {
+  font-size: 1.2em;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .theIntro h1 {
+    font-size: 2em;
+  }
+
+  .theIntro h5 {
+    font-size: 1.2em;
+  }
+
+  .theIntro p {
+    font-size: 1em;
+  }
+
+  .content-text h5 {
+    font-size: 1.2em;
+  }
+
+  .content-text p {
+    font-size: 1em;
+  }
+
+  .box1-image {
+    width: 100%;
+  }
+}
+
+@media (max-width: 576px) {
+  .theIntro h1 {
+    font-size: 1.8em;
+  }
+
+  .theIntro h5 {
+    font-size: 1em;
+  }
+
+  .theIntro p {
+    font-size: 0.9em;
+  }
+
+  .content-text h5 {
+    font-size: 1em;
+  }
+
+  .content-text p {
+    font-size: 0.9em;
+  }
+
+  .box1-image {
+    width: 100%;
+  }
+}
