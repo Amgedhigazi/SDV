@@ -1,0 +1,10 @@
+node_modules/
+src/
+public/
+build/
+.claude/
+.cursor/
+.kiro/
+.github/
+nixpacks.toml
+*.md
