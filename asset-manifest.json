@@ -1,8 +1,7 @@
 {
   "files": {
-    "main.css": "/SDV/static/css/main.7d58788d.css",
-    "main.js": "/SDV/static/js/main.5a8a1413.js",
-    "static/media/DSC_1963.jpg": "/SDV/static/media/DSC_1963.f2cdf7bbdfab16619032.jpg",
+    "main.css": "/SDV/static/css/main.c8844474.css",
+    "main.js": "/SDV/static/js/main.7d1e2cd1.js",
     "static/media/Talab.jpg": "/SDV/static/media/Talab.416ec9c9e33dcfddb10a.jpg",
     "static/media/Sadam.jpg": "/SDV/static/media/Sadam.d3ea889434f498e4b417.jpg",
     "static/media/demo2.jpg": "/SDV/static/media/demo2.8ad92365d2406ebfb995.jpg",
@@ -10,6 +9,7 @@
     "static/media/Monim.jpg": "/SDV/static/media/Monim.23ac3a48cb150d3637fc.jpg",
     "static/media/bg-hero.jpg": "/SDV/static/media/bg-hero.12633ffdcc40a80eb2c3.jpg",
     "static/media/Marwa.jpg": "/SDV/static/media/Marwa.5f885249020a5585671e.jpg",
+    "static/media/IMG-20200224-WA0215.jpg": "/SDV/static/media/IMG-20200224-WA0215.19a13de7beadc983cdde.jpg",
     "static/media/mohammed-terwis.jpg": "/SDV/static/media/mohammed-terwis.4ec0aa97683ae511dc85.jpg",
     "static/media/IsslamZain.jpg": "/SDV/static/media/IsslamZain.69d7a4086b0e7ad1640a.jpg",
     "static/media/eltayeb.jpg": "/SDV/static/media/eltayeb.2efa9641c683b8ef92c7.jpg",
@@ -31,11 +31,11 @@
     "static/media/Amged.jpg": "/SDV/static/media/Amged.71668fd4452bc32c0e26.jpg",
     "static/media/SnaaHausband.jpg": "/SDV/static/media/SnaaHausband.d798909f1b2241d7ead6.jpg",
     "index.html": "/SDV/index.html",
-    "main.7d58788d.css.map": "/SDV/static/css/main.7d58788d.css.map",
-    "main.5a8a1413.js.map": "/SDV/static/js/main.5a8a1413.js.map"
+    "main.c8844474.css.map": "/SDV/static/css/main.c8844474.css.map",
+    "main.7d1e2cd1.js.map": "/SDV/static/js/main.7d1e2cd1.js.map"
   },
   "entrypoints": [
-    "static/css/main.7d58788d.css",
-    "static/js/main.5a8a1413.js"
+    "static/css/main.c8844474.css",
+    "static/js/main.7d1e2cd1.js"
   ]
 }
