@@ -1,22 +1,16 @@
 {
   "files": {
-    "main.css": "/SDV/static/css/main.b97a0db2.css",
-    "main.js": "/SDV/static/js/main.11498cc2.js",
+    "main.css": "/SDV/static/css/main.5df135fd.css",
+    "main.js": "/SDV/static/js/main.a7ccef42.js",
     "static/media/Talab.jpg": "/SDV/static/media/Talab.416ec9c9e33dcfddb10a.jpg",
     "static/media/Sadam.jpg": "/SDV/static/media/Sadam.d3ea889434f498e4b417.jpg",
     "static/media/demo2.jpg": "/SDV/static/media/demo2.8ad92365d2406ebfb995.jpg",
     "static/media/Achen-demo.jpg": "/SDV/static/media/Achen-demo.f70814fd1d69a311afff.jpg",
     "static/media/Monim.jpg": "/SDV/static/media/Monim.23ac3a48cb150d3637fc.jpg",
     "static/media/bg-hero.jpg": "/SDV/static/media/bg-hero.12633ffdcc40a80eb2c3.jpg",
-    "static/media/easy-customise.jpg": "/SDV/static/media/easy-customise.63cc1b058aff43060c19.jpg",
-    "static/media/modern-design.jpg": "/SDV/static/media/modern-design.d826227d409e2d756aaa.jpg",
-    "static/media/clean-design.jpg": "/SDV/static/media/clean-design.fc7a4157f6359b9c35bf.jpg",
-    "static/media/great-support.jpg": "/SDV/static/media/great-support.008caea2c34c5823f540.jpg",
     "static/media/Marwa.jpg": "/SDV/static/media/Marwa.5f885249020a5585671e.jpg",
-    "static/media/unlimited-features.jpg": "/SDV/static/media/unlimited-features.cdc68e12d5f12a567519.jpg",
     "static/media/mohammed-terwis.jpg": "/SDV/static/media/mohammed-terwis.4ec0aa97683ae511dc85.jpg",
     "static/media/IsslamZain.jpg": "/SDV/static/media/IsslamZain.69d7a4086b0e7ad1640a.jpg",
-    "static/media/advanced-option.jpg": "/SDV/static/media/advanced-option.8d5c3f331c1f32b4938b.jpg",
     "static/media/eltayeb.jpg": "/SDV/static/media/eltayeb.2efa9641c683b8ef92c7.jpg",
     "static/media/sakin.jpg": "/SDV/static/media/sakin.f7599e33a0291e2607d4.jpg",
     "static/media/Adodo.jpg": "/SDV/static/media/Adodo.15136845e10cb43de64b.jpg",
@@ -36,11 +30,11 @@
     "static/media/Amged.jpg": "/SDV/static/media/Amged.71668fd4452bc32c0e26.jpg",
     "static/media/SnaaHausband.jpg": "/SDV/static/media/SnaaHausband.d798909f1b2241d7ead6.jpg",
     "index.html": "/SDV/index.html",
-    "main.b97a0db2.css.map": "/SDV/static/css/main.b97a0db2.css.map",
-    "main.11498cc2.js.map": "/SDV/static/js/main.11498cc2.js.map"
+    "main.5df135fd.css.map": "/SDV/static/css/main.5df135fd.css.map",
+    "main.a7ccef42.js.map": "/SDV/static/js/main.a7ccef42.js.map"
   },
   "entrypoints": [
-    "static/css/main.b97a0db2.css",
-    "static/js/main.11498cc2.js"
+    "static/css/main.5df135fd.css",
+    "static/js/main.a7ccef42.js"
   ]
 }
