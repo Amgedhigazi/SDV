@@ -1,232 +1,94 @@
-import React from 'react';
-import { Carousel as AntdCarousel } from 'antd';
-import { Row, Col } from 'antd';
-import img1 from '../../assets/images/bg-hero.jpg';
-import img2 from '../../assets/images/Untitle.jpg';
-import img3 from '../../assets/images/Achen-demo.jpg';
-import img4 from '../../assets/images/Gather.jpg';
-import img5 from '../../assets/images/Recovered.jpg';
-import img6 from '../../assets/images/Reco.jpg';
-import img7 from '../../assets/images/overed.jpg';
-import img8 from '../../assets/images/demo2.jpg';
-//import img8 from '../../assets/images/DSC_1757.jpg';
+import React from "react";
+import { Carousel as AntdCarousel } from "antd";
+import { Row, Col } from "antd";
+import img1 from "../../assets/images/bg-hero.jpg";
+import img2 from "../../assets/images/Untitle.jpg";
+import img3 from "../../assets/images/Achen-demo.jpg";
+import img4 from "../../assets/images/Gather.jpg";
+import img5 from "../../assets/images/Recovered.jpg";
+import img6 from "../../assets/images/Reco.jpg";
+import img7 from "../../assets/images/overed.jpg";
+import img8 from "../../assets/images/demo2.jpg";
 
-
-const contentStyle = {
-  height: '30px',
-  color: '#2f7194',
-  lineHeight: '40px',
-  textAlign: 'center',
-  background: '#a4d2dd',
-  paddingLeft: '10px',
-  paddingTop: '10px'
-};
-
-const MyItems = [
+const slides = [
   {
-    key: '1',
-    title: 'High Performance',
-    content: 'Elevate your game with high-performance technology. Enjoy seamless, efficient and powerful experiences.',
+    key: "1",
+    img: img1,
+    title: "SDV NRW e.V. — Since 1982",
+    content: "Home of the Sudanese community in North Rhine-Westphalia for over four decades.",
+    sub: "Supporting integration, preserving culture, and standing together in times of need."
   },
   {
-    key: '2',
-    title: 'Flat Design',
-    content: 'Simplify your aesthetic with flat design. Clean, modern, and minimal design elements for a fresh look.',
+    key: "2",
+    img: img2,
+    title: "A Community That Cares",
+    content: "Our members come from all corners of Sudan, united by shared values and love for their homeland.",
+    sub: "Regular meetings, cultural events, and social support keep our community strong."
   },
   {
-    key: '3',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    key: "3",
+    img: img3,
+    title: "Aachen — Marching for Sudan",
+    content: "SDV NRW members took to the streets of Aachen in solidarity with the Sudanese revolution.",
+    sub: "Raising our voices for freedom, peace, and justice for all Sudanese people."
   },
   {
-    key: '4',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    key: "4",
+    img: img4,
+    title: "Community Gatherings",
+    content: "From Essen to Düsseldorf, Köln to Dortmund — we bring Sudanese families together across NRW.",
+    sub: "Celebrating, connecting, and supporting one another every step of the way."
   },
   {
-    key: '5',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    key: "5",
+    img: img5,
+    title: "Strength in Unity",
+    content: "Marking Sudanese Independence Day, the December Revolution, and Eid celebrations together.",
+    sub: "SDV NRW keeps our cultural identity alive and vibrant for every generation."
   },
   {
-    key: '6',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    key: "6",
+    img: img6,
+    title: "Cultural Heritage",
+    content: "We celebrate Sudanese heritage — music, food, art, and tradition — through cultural evenings.",
+    sub: "Bringing joy and a sense of belonging to our community in Germany."
   },
   {
-    key: '7',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution. Get more done, faster and with ease.',
+    key: "7",
+    img: img7,
+    title: "Solidarity Across Borders",
+    content: "When Sudan faces crisis, SDV NRW organises fundraising campaigns and humanitarian aid.",
+    sub: "Collective action to support our families and communities back home."
   },
   {
-    key: '8',
-    title: 'Simplified Workflow',
-    content: 'Streamline your work with our intuitive and efficient workflow solution.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.solutionsolution Get more done, faster and with ease.',
+    key: "8",
+    img: img8,
+    title: "March for Democracy",
+    content: "Powerful street demonstrations in solidarity with the Sudanese people's demand for freedom.",
+    sub: "Standing for democracy, dignity, and an end to oppression — together."
   },
 ];
 
 const MyCarousel = () => (
-  <AntdCarousel autoplay>
-    {MyItems.map(item => (
-      <div key={item.key}>
-        <Row gutter={[14, 14]}  style={{ padding: "30px 10px", margin: "30px 10px" }}>
-          <Col span={14}>
-            <div className="img">
-              <img alt="img" src={img1} />
+  <AntdCarousel autoplay dots={{ className: 'carousel-dots' }}>
+    {slides.map((slide) => (
+      <div key={slide.key}>
+        <Row gutter={[32, 0]} align="middle" style={{ padding: "24px 32px", minHeight: 400 }}>
+          <Col xs={24} md={12}>
+            <div className="carousel-img-wrap">
+              <img alt={slide.title} src={slide.img} />
             </div>
           </Col>
-          <Col span={10}>
-            <div className="content" >
-              <h3><b>{item.title}</b></h3>
-              <p>{item.content}</p>
+          <Col xs={24} md={12}>
+            <div className="carousel-text">
+              <h3>{slide.title}</h3>
+              <p>{slide.content}</p>
+              <p>{slide.sub}</p>
             </div>
           </Col>
-         </Row>
-        </div>
-        ))}
-
-         
-        {MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]} style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img2} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
         </Row>
       </div>
-      
     ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]} style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img3} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]} style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img4} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]}style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img5} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]}style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img6} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]}style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img7} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-{MyItems.map(item => (
-        <div key={item.key}>
-            <Row gutter={[18, 10]}style={{ padding: "20px 20px", margin: "40px 40px" }}>
-            <Col span={14}>
-                <div className="img">
-                <img alt="img" src={img8} />
-                </div>
-            </Col>
-            <Col span={10}>
-                <div className="content">
-                <h3><b>{item.title}</b></h3>
-                <p>{item.content}</p>
-                </div>
-            </Col>
-        </Row>
-      </div>
-      
-    ))}
-
-
-
   </AntdCarousel>
 );
 

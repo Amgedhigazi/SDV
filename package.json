@@ -1,7 +1,7 @@
 {
   "name": "SDV-PROJECT",
   "version": "1.0.0",
-  "homepage": "https://amgedhigazi.github.io/SDV",
+  "homepage": "/",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
@@ -9,6 +9,7 @@
     "antd": "^5.18.3",
     "better-react-carousel": "^1.1.2",
     "bootstrap": "^5.3.3",
+    "express": "^5.2.1",
     "jquery": "^3.7.1",
     "lightbox2": "^2.11.4",
     "node": "^22.3.0",
@@ -19,9 +20,10 @@
     "react-scripts": "5.0.1",
     "reactstrap": "^9.2.2"
   },
-"scripts": {
+  "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
+    "serve": "node server.js",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",

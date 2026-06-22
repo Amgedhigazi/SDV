@@ -214,6 +214,24 @@ const TheCarousel = () => {
           </Carousel.Item>
         </Carousel>
         <hr/>
+
+        <div className="visit-sudan-cta">
+          <div className="visit-sudan-cta-inner">
+            <div>
+              <h3>Planning a Trip to Sudan?</h3>
+              <p>
+                We can arrange exclusive guided tours tailored to your interests — ancient pyramids,
+                the Nile, cultural heritage sites, and more. Your trip also supports our community Verein.
+              </p>
+            </div>
+            <a
+              href="mailto:de.sd.verein@gmail.com?subject=Sudan Tour Inquiry&body=I am interested in visiting Sudan and would like more information about guided tours arranged by SDV NRW e.V."
+              className="btn-tour"
+            >
+              <i className="fas fa-map-marker-alt"></i> Request a Sudan Tour
+            </a>
+          </div>
+        </div>
       </div>
     </>
   );

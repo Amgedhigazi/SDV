@@ -39,10 +39,40 @@ function AppFooter() {
             <p><i className="fas fa-phone" style={{marginRight: 8, color: '#f5a623'}}></i>+49 176 61048483</p>
             <p><i className="fas fa-envelope" style={{marginRight: 8, color: '#f5a623'}}></i>de.sd.verein@gmail.com</p>
             <p><i className="fas fa-globe" style={{marginRight: 8, color: '#f5a623'}}></i>www.sudandeutschverein.de</p>
-            <p style={{marginTop: 12, fontSize: 12, color: 'rgba(255,255,255,0.4)'}}>
-              IBAN: DE61300400000826440000<br />
-              Commerzbank &bull; Reg. Nr. 10665
-            </p>
+          </div>
+
+          <div className="footer-col">
+            <h4><i className="fas fa-hand-holding-heart" style={{marginRight: 8, color: '#f5a623'}}></i>Donate to Sudan Relief</h4>
+            <div className="footer-bank-box">
+              <div className="footer-bank-row">
+                <span>Account</span>
+                <strong>SDV NRW e.V.</strong>
+              </div>
+              <div className="footer-bank-row">
+                <span>IBAN</span>
+                <strong>DE61 3004 0000 0826 4400 00</strong>
+              </div>
+              <div className="footer-bank-row">
+                <span>BIC</span>
+                <strong>COBADEFFXXX</strong>
+              </div>
+              <div className="footer-bank-row">
+                <span>Bank</span>
+                <strong>Commerzbank</strong>
+              </div>
+              <div className="footer-bank-row">
+                <span>Reg.</span>
+                <strong>Nr. 10665</strong>
+              </div>
+            </div>
+            <a
+              href="https://www.paypal.com/paypalme/sdvnrw"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="footer-paypal-btn"
+            >
+              <i className="fab fa-paypal"></i> Donate via PayPal
+            </a>
           </div>
 
         </div>

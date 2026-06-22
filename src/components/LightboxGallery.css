@@ -1,7 +1,7 @@
 
 /* LightboxGallery.css */
 .lightbox-gallery {
-  background-image: linear-gradient(#dbcced, #a4d2dd, #296483);
+  background-image: linear-gradient(160deg, #0d3b66 0%, #00b4d8 55%, #0d3b66 100%);
   background-repeat: no-repeat;
   color: #000;
   overflow-y: hidden;

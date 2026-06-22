@@ -1,10 +1,12 @@
 import React from 'react';
-import { Routes, Route, Link } from 'react-router-dom';
+import { Routes, Route } from 'react-router-dom';
 import './App.css';
 import 'antd/dist/antd.css';
 import 'lightbox2/dist/css/lightbox.min.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Layout } from 'antd';
+import { AuthProvider } from './context/AuthContext';
+import LoginModal from './components/auth/LoginModal';
 import AppHeader from './components/common/header';
 import AppFooter from './components/common/footer';
 import AppLand from './views/land';
@@ -16,27 +18,25 @@ const { Header, Content, Footer } = Layout;
 
 function App() {
   return (
-    <Layout className="mainLayout">
-      <Header>
-        <AppHeader />
-      </Header>
-      <Content>
-        <AppLand />
-        
-       
-        
-        <Routes>
-          <Route path="/home" element={<AppHero />} />
-          <Route path="/features" element={<AppFeature />} />
-          <Route path="/gallery/:id" element={<GalleryViewer />} />
-        </Routes>
-       
-      </Content>
-      
-      <Footer>
-        <AppFooter />
-      </Footer>
-    </Layout>
+    <AuthProvider>
+      <Layout className="mainLayout">
+        <Header>
+          <AppHeader />
+        </Header>
+        <Content>
+          <AppLand />
+          <Routes>
+            <Route path="/home"        element={<AppHero />} />
+            <Route path="/features"    element={<AppFeature />} />
+            <Route path="/gallery/:id" element={<GalleryViewer />} />
+          </Routes>
+        </Content>
+        <Footer>
+          <AppFooter />
+        </Footer>
+      </Layout>
+      <LoginModal />
+    </AuthProvider>
   );
 }
 

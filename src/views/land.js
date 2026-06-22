@@ -9,6 +9,7 @@ import AppOurBoard from '../components/home/OurBoard';
 import AppContact from '../views/contact';
 import TheCarousel from "../components/home/historicCarousel";
 import MemberGallery from '../components/home/MembersGallery';
+import HumanitarianProjects from '../components/home/HumanitarianProjects';
 
 
 
@@ -21,6 +22,7 @@ function AppLand() {
    
       <AppWorks/>
       <AppFaq/>
+      <HumanitarianProjects />
       <AppOurBoard/>
       <AppContact/>
        <TheCarousel />

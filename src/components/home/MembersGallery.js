@@ -1,363 +1,69 @@
-﻿import React from 'react'
-import Carousel from 'better-react-carousel'
+import React from 'react';
+import Carousel from 'better-react-carousel';
 
-const MemberGallery = () => {
-  return (
-   <>
-    <div className='content' style={{paddingLeft:'50px', paddingRight:'50px', fontFamily:'initial', textAlign:'center'}}> 
-    <h1> Sudanese Historical Figures </h1>
-    <p>Historical View and Exhibition showcasing the rich and sequenced history of Sudan, including historical figures and key milestones highlighted Sudanese culture and traditions, bringing a sense of home and heritage to the attendees.</p>
-  </div>
-  
-     <Carousel autoPlay cols={6} rows={1} gap={20} loop>
+const BASE = process.env.PUBLIC_URL;
 
-      <Carousel.Item>
-      <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-        <img width="100%" src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`} />
-        </a>
-      </Carousel.Item>
+const figures = [
+  { file: '1-Pre-historich.jpg',      alt: 'Pre-historic Sudan' },
+  { file: '2-Nubian-Kindoms.jpg',     alt: 'Nubian Kingdoms' },
+  { file: 'Kush.jpg',                 alt: 'Kingdom of Kush' },
+  { file: '3-Christian-Kingdom.jpg',  alt: 'Christian Kingdom' },
+  { file: '5.jpg',                    alt: 'Sudanese History' },
+  { file: '6-Mehda.jpg',              alt: 'Al-Mahdi' },
+  { file: 'othman-Digna.jpg',         alt: 'Othman Digna' },
+  { file: 'Dinar.jpg',                alt: 'Sultan Ali Dinar' },
+  { file: 'abdelrahman-mahdi.jpg',    alt: 'Abdel Rahman Al-Mahdi' },
+  { file: 'Istighlal.jpg',            alt: 'Independence' },
+  { file: 'Azhari.jpg',               alt: 'Ismail Al-Azhari' },
+  { file: 'Almahgoub.jpg',            alt: 'Mohammed Ahmed Mahgoub' },
+  { file: 'josef-lago.jpg',           alt: 'Josef Lago' },
+  { file: 'Khalda-Zaher.jpg',         alt: 'Khalda Zahir' },
+  { file: 'Abdelkhaliq-mahjoub.jpg',  alt: 'Abdel Khaliq Mahjoub' },
+  { file: 'abilaler.jpg',             alt: 'Abi Laler' },
+  { file: 'Ahmed-Almarghani.jpg',     alt: 'Ahmed Al-Marghani' },
+  { file: 'aljizoli-Dafallah-3.jpg',  alt: 'Al-Jizoli Dafallah' },
+  { file: 'taha-alqurashi.jpg',       alt: 'Taha Al-Qurashi' },
+  { file: 'fatma-ahmed.jpg',          alt: 'Fatma Ahmed Ibrahim' },
+  { file: 'nogud.jpg',                alt: 'Mohammed Ibrahim Nugud' },
+  { file: 'swar-aldahab.jpg',         alt: 'Swar Al-Dahab' },
+  { file: 'lsadiq.jpg',               alt: 'Al-Sadiq Al-Mahdi' },
+  { file: 'garang.jpg',               alt: 'John Garang' },
+  { file: 'Ali-marghani.jpg',         alt: 'Ali Al-Marghani' },
+  { file: 'altrabi.jpg',              alt: 'Hassan Al-Turabi' },
+  { file: 'omar-bashir.jpg',          alt: 'Omar Al-Bashir' },
+  { file: 'Rolers-of-Sudan.jpg',      alt: 'Rulers of Sudan' },
+];
 
-      <Carousel.Item>
-  <a href="../../../images/new/2-Nubian-Kindoms.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/2-Nubian-Kindoms.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
+const MemberGallery = () => (
+  <>
+    <div className="content" style={{ paddingLeft: '50px', paddingRight: '50px', fontFamily: 'initial', textAlign: 'center' }}>
+      <h1>Sudanese Historical Figures</h1>
+      <p>
+        Historical View and Exhibition showcasing the rich and sequenced history of Sudan,
+        including historical figures and key milestones that highlight Sudanese culture and traditions,
+        bringing a sense of home and heritage to the attendees.
+      </p>
+    </div>
 
-<Carousel.Item>
-  <a href="../../../images/new/Kush.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Kush.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/3-Christian-Kingdom.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/3-Christian-Kingdom.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/5.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/5.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/6-Mehda.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/6-Mehda.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/othman-Digna.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/othman-Digna.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/Dinar.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Dinar.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/abdelrahman-mahdi.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/abdelrahman-mahdi.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-
-<Carousel.Item>
-  <a href="../../../images/new/Istighlal.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Istighlal.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/Azhari.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Azhari.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/Almahgoub.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Almahgoub.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/josef-lago.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/josef-lago.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-      <Carousel.Item>
-  <a href="../../../images/new/Khalda-Zaher.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Khalda-Zaher.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-
-
-<Carousel.Item>
-  <a href="../../../images/new/Abdelkhaliq-mahjoub.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Abdelkhaliq-mahjoub.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/abilaler.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/abilaler.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-
-
-<Carousel.Item>
-  <a href="../../../images/new/Ahmed-Almarghani.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Ahmed-Almarghani.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/aljizoli-Dafallah-3.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/aljizoli-Dafallah-3.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/taha-alqurashi.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/taha-alqurashi.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-      <Carousel.Item>
-  <a href="../../../images/new/faitori.jpg" target="_blank" rel="noopener noreferrer">
-  <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/fatma-ahmed.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/nogud.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/nogud.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/swar-aldahab.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/swar-aldahab.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/lsadiq.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/lsadiq.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/garang.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/garang.jpg`}
-      alt="Pre-historic"/>
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/Ali-marghani.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Ali-marghani.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/altrabi.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/altrabi.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-
-<Carousel.Item>
-  <a href="../../../images/new/omar-bashir.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/omar-bashir.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-<Carousel.Item>
-  <a href="../../../images/new/Rolers-of-Sudan.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/Rolers-of-Sudan.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-<Carousel.Item>
-  <a href="../../../images/new/1-Pre-historich.jpg" target="_blank" rel="noopener noreferrer">
-    <img
-      width="100%"
-      src={`${process.env.PUBLIC_URL}/images/new/1-Pre-historich.jpg`}
-      alt="Pre-historic"
-    />
-  </a>
-</Carousel.Item>
-
-      <Carousel.Item>
-        {/* anything you want to show in the grid */}
-      </Carousel.Item>
-      {/* ... */}
+    <Carousel autoPlay cols={6} rows={1} gap={20} loop>
+      {figures.map(({ file, alt }) => (
+        <Carousel.Item key={file}>
+          <a
+            href={`${BASE}/images/new/${file}`}
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img
+              width="100%"
+              src={`${BASE}/images/new/${file}`}
+              alt={alt}
+              style={{ borderRadius: 6, cursor: 'pointer' }}
+            />
+          </a>
+        </Carousel.Item>
+      ))}
     </Carousel>
-    </>
-  )
-}
+  </>
+);
+
 export default MemberGallery;
