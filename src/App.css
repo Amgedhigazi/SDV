@@ -627,6 +627,42 @@ p { font-size: 16px; line-height: 1.7; }
   font-weight: 600;
 }
 
+.header-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.header-controls--vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.btn-nav-control {
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.25);
+  color: rgba(255,255,255,0.9);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: var(--transition);
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  white-space: nowrap;
+  letter-spacing: 0.5px;
+}
+
+.btn-nav-control:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #111;
+}
+
+.btn-dark i { font-size: 13px; }
+
 .btn-header-login,
 .btn-logout {
   background: rgba(255,255,255,0.12);
@@ -1620,3 +1656,125 @@ p { font-size: 16px; line-height: 1.7; }
     text-align: center;
   }
 }
+
+/* ========================================
+   Dark Mode
+======================================== */
+body.dark-mode {
+  --bg: #0f1923;
+  --bg-card: #1a2535;
+  --bg-section: #111c28;
+  --text: #e2e8f0;
+  --text-muted: #94a3b8;
+  --border: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .ant-layout,
+body.dark-mode .mainLayout {
+  background: #0f1923;
+}
+
+/* General page background */
+body.dark-mode .main,
+body.dark-mode #about,
+body.dark-mode #faq,
+body.dark-mode #contact {
+  background: #0f1923;
+  color: #e2e8f0;
+}
+
+/* Text */
+body.dark-mode h1,
+body.dark-mode h2,
+body.dark-mode h3,
+body.dark-mode h4,
+body.dark-mode h5,
+body.dark-mode p,
+body.dark-mode li,
+body.dark-mode span:not(.ant-anchor-link-title) {
+  color: #e2e8f0;
+}
+
+body.dark-mode .titleHolder h2 { color: #fff; }
+body.dark-mode .titleHolder p  { color: #94a3b8; }
+
+/* About section */
+body.dark-mode .aboutBlock { background: #111c28; }
+body.dark-mode .aboutBlock .content h3 { color: #f5a623; }
+
+/* Humanitarian projects */
+body.dark-mode .humanitarian-section {
+  background: linear-gradient(180deg, #111c28 0%, #0f1923 100%);
+}
+
+body.dark-mode .project-card {
+  background: #1a2535;
+  border-color: rgba(255,255,255,0.08);
+}
+
+body.dark-mode .project-title { color: #90cdf4; }
+body.dark-mode .project-desc  { color: #94a3b8; }
+body.dark-mode .project-progress-bar { background: #2d3748; }
+
+/* Pricing / membership */
+body.dark-mode .pricing-card {
+  background: #1a2535;
+  border-color: rgba(255,255,255,0.1);
+}
+
+body.dark-mode .pricing-title    { color: #90cdf4; }
+body.dark-mode .pricing-features li { color: #94a3b8; border-color: #2d3748; }
+body.dark-mode .pricing-amount   { color: #e2e8f0; }
+body.dark-mode .pricing-period   { color: #94a3b8; }
+body.dark-mode .pricing-btn--outline {
+  border-color: #90cdf4;
+  color: #90cdf4;
+}
+body.dark-mode .pricing-btn--outline:hover {
+  background: #90cdf4;
+  color: #0f1923;
+}
+
+/* Carousel */
+body.dark-mode .carousel-text h3 { color: #90cdf4; }
+body.dark-mode .carousel-text p  { color: #94a3b8; }
+
+/* Gallery cards */
+body.dark-mode .gallery-card {
+  background: #1a2535;
+  border-color: rgba(255,255,255,0.08);
+}
+body.dark-mode .gallery-card-body h4 { color: #e2e8f0; }
+
+/* Donation modal */
+body.dark-mode .donation-form     { background: #1a2535; }
+body.dark-mode .donation-label    { color: #90cdf4; }
+body.dark-mode .donation-input    { background: #0f1923; color: #e2e8f0; border-color: #2d3748; }
+body.dark-mode .amount-preset-btn { background: #0f1923; border-color: #2d3748; color: #e2e8f0; }
+body.dark-mode .payment-method-btn { background: #0f1923; border-color: #2d3748; color: #e2e8f0; }
+body.dark-mode .donation-bank-box { background: #0f1923; border-color: #2d3748; }
+body.dark-mode .bank-detail-row   { border-color: #2d3748; }
+body.dark-mode .bank-detail-row strong { color: #e2e8f0; }
+
+/* Footer */
+body.dark-mode .footer-modern { background: #080e16; }
+
+/* Ant Design overrides */
+body.dark-mode .ant-anchor-link-title { color: rgba(255,255,255,0.85) !important; }
+body.dark-mode .ant-layout-header     { background: rgba(8,14,22,0.95) !important; }
+body.dark-mode .ant-modal-content     { background: #1a2535; }
+body.dark-mode .ant-modal-header      { background: #1a2535; border-color: #2d3748; }
+body.dark-mode .ant-modal-title       { color: #e2e8f0; }
+body.dark-mode .ant-tabs-tab          { color: #94a3b8; }
+body.dark-mode .ant-tabs-tab-active .ant-tabs-tab-btn { color: #90cdf4; }
+body.dark-mode .ant-input,
+body.dark-mode .ant-select-selector  { background: #0f1923 !important; color: #e2e8f0 !important; border-color: #2d3748 !important; }
+
+/* Gallery locked screen */
+body.dark-mode .gallery-locked-screen { background: #0f1923; }
+body.dark-mode .gallery-locked-box    { background: #1a2535; }
+body.dark-mode .gallery-locked-box h2 { color: #90cdf4; }
+
+/* Historical figures & carousel text */
+body.dark-mode .content h1 { color: #f5a623; }
+body.dark-mode .theIntro h1 { color: #f5a623; }

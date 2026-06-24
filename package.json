@@ -1,7 +1,7 @@
 {
   "name": "SDV-PROJECT",
   "version": "1.0.0",
-  "homepage": "/",
+  "homepage": "https://www.sdv-nrw.de",
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome-svg-core": "^6.5.2",

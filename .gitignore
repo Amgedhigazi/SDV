@@ -23,3 +23,6 @@ yarn-debug.log*
 yarn-error.log*
 public/images_backup/
 public/images/
+.claude/
+.cursor/
+.kiro/

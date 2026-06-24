@@ -3,12 +3,23 @@ import logo from '../../assets/images/LOgo.png';
 import { Anchor, Drawer, Button } from 'antd';
 import { UserOutlined, LogoutOutlined } from '@ant-design/icons';
 import { useAuth } from '../../context/AuthContext';
+import { useTheme } from '../../context/ThemeContext';
 
 const { Link } = Anchor;
 
+function switchLanguage(lang) {
+  const select = document.querySelector('.goog-te-combo');
+  if (select) {
+    select.value = lang;
+    select.dispatchEvent(new Event('change'));
+  }
+}
+
 function AppHeader() {
   const [visible, setVisible]   = useState(false);
+  const [lang, setLang]         = useState('en');
   const { user, logout, openLogin } = useAuth();
+  const { isDark, toggleDark }  = useTheme();
 
   useEffect(() => {
     const headerEl = document.querySelector('.ant-layout-header');
@@ -22,6 +33,41 @@ function AppHeader() {
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const toggleLang = () => {
+    const next = lang === 'en' ? 'de' : 'en';
+    setLang(next);
+    switchLanguage(next);
+  };
+
+  const NavControls = ({ vertical }) => (
+    <div className={`header-controls${vertical ? ' header-controls--vertical' : ''}`}>
+      <button className="btn-nav-control btn-lang" onClick={toggleLang} title="Switch language">
+        <i className="fas fa-globe"></i>
+        <span>{lang === 'en' ? 'DE' : 'EN'}</span>
+      </button>
+
+      <button className="btn-nav-control btn-dark" onClick={toggleDark} title="Toggle dark mode">
+        <i className={isDark ? 'fas fa-sun' : 'fas fa-moon'}></i>
+      </button>
+
+      {user ? (
+        <div className="header-user-menu">
+          <span className="header-username">
+            <UserOutlined style={{ marginRight: 6 }} />
+            {user.name?.split(' ')[0]}
+          </span>
+          <button className="btn-logout" onClick={logout}>
+            <LogoutOutlined /> Sign Out
+          </button>
+        </div>
+      ) : (
+        <button className="btn-header-login" onClick={openLogin}>
+          <UserOutlined /> Sign In
+        </button>
+      )}
+    </div>
+  );
 
   return (
     <>
@@ -40,22 +86,7 @@ function AppHeader() {
               <Link href="#faq"      title="Calendar" />
               <Link href="#contact"  title="Contact" />
             </Anchor>
-
-            {user ? (
-              <div className="header-user-menu">
-                <span className="header-username">
-                  <UserOutlined style={{ marginRight: 6 }} />
-                  {user.name?.split(' ')[0]}
-                </span>
-                <button className="btn-logout" onClick={logout}>
-                  <LogoutOutlined /> Sign Out
-                </button>
-              </div>
-            ) : (
-              <button className="btn-header-login" onClick={openLogin}>
-                <UserOutlined /> Sign In
-              </button>
-            )}
+            <NavControls />
           </div>
 
           <div className="mobileVisible">
@@ -72,11 +103,7 @@ function AppHeader() {
                 <Link href="#contact"  title="Contact" />
               </Anchor>
               <div style={{ marginTop: 24 }}>
-                {user ? (
-                  <Button block onClick={() => { logout(); setVisible(false); }}>Sign Out</Button>
-                ) : (
-                  <Button block type="primary" onClick={() => { openLogin(); setVisible(false); }}>Sign In</Button>
-                )}
+                <NavControls vertical />
               </div>
             </Drawer>
           </div>
