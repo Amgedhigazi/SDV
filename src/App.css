@@ -1778,3 +1778,40 @@ body.dark-mode .gallery-locked-box h2 { color: #90cdf4; }
 /* Historical figures & carousel text */
 body.dark-mode .content h1 { color: #f5a623; }
 body.dark-mode .theIntro h1 { color: #f5a623; }
+
+/* ========================================
+   Arabic Language Overrides
+======================================== */
+body.lang-ar h1,
+body.lang-ar h2,
+body.lang-ar h3,
+body.lang-ar h4,
+body.lang-ar h5,
+body.lang-ar p,
+body.lang-ar li,
+body.lang-ar span,
+body.lang-ar label,
+body.lang-ar .titleHolder,
+body.lang-ar .titleHolder h2,
+body.lang-ar .titleHolder p,
+body.lang-ar .ant-card-meta-title,
+body.lang-ar .ant-card-body,
+body.lang-ar .ant-collapse-header,
+body.lang-ar .ant-list-item,
+body.lang-ar .ant-anchor-link-title,
+body.lang-ar .event-photo-overlay span,
+body.lang-ar .pricing-title,
+body.lang-ar .pricing-features li,
+body.lang-ar .carousel-text h3,
+body.lang-ar .carousel-text p,
+body.lang-ar .quickSupport h3,
+body.lang-ar .quickSupport p {
+  text-align: center !important;
+  direction: rtl;
+}
+
+body.lang-ar .ant-collapse-content-box p,
+body.lang-ar .ant-collapse-content-box b {
+  text-align: center !important;
+  direction: rtl;
+}

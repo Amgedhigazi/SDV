@@ -8,10 +8,21 @@ import { useTheme } from '../../context/ThemeContext';
 const { Link } = Anchor;
 
 function switchLanguage(lang) {
-  const select = document.querySelector('.goog-te-combo');
-  if (select) {
-    select.value = lang;
-    select.dispatchEvent(new Event('change'));
+  const trigger = () => {
+    const select = document.querySelector('.goog-te-combo');
+    if (select) {
+      select.value = lang;
+      select.dispatchEvent(new Event('change'));
+    }
+  };
+  trigger();
+  setTimeout(trigger, 800);
+  setTimeout(trigger, 2000);
+
+  if (lang === 'ar') {
+    document.body.classList.add('lang-ar');
+  } else {
+    document.body.classList.remove('lang-ar');
   }
 }
 
@@ -35,7 +46,7 @@ function AppHeader() {
   }, []);
 
   const toggleLang = () => {
-    const next = lang === 'en' ? 'de' : 'en';
+    const next = lang === 'en' ? 'ar' : 'en';
     setLang(next);
     switchLanguage(next);
   };
@@ -44,7 +55,7 @@ function AppHeader() {
     <div className={`header-controls${vertical ? ' header-controls--vertical' : ''}`}>
       <button className="btn-nav-control btn-lang" onClick={toggleLang} title="Switch language">
         <i className="fas fa-globe"></i>
-        <span>{lang === 'en' ? 'DE' : 'EN'}</span>
+        <span>{lang === 'en' ? 'AR' : 'EN'}</span>
       </button>
 
       <button className="btn-nav-control btn-dark" onClick={toggleDark} title="Toggle dark mode">
